@@ -6,7 +6,8 @@ const Main = () => {
         <form action="">
             <input 
                 type="text" 
-                className='border-2 shrink w-64 h-14 rounded-lg p-2'
+                placeholder='e.g oregano'
+                className='border-2 shrink w-64 h-14 rounded-lg p-4'
             />
         </form>
         <button className="bg-black  text-slate-100 p-2  rounded-lg h-14">
