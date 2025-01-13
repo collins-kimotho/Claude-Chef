@@ -1,9 +1,13 @@
 import React from 'react'
 import chef from '../assets/cooking.png'
+import { useState } from 'react'
 
 const Header = () => {
+
+  
+
   return (
-    <header className="flex items-center justify-center gap-8 bg-slate-300 h-20">
+    <header className="flex items-center justify-center gap-8 bg-gray-200 h-20 shadow-md">
         <img 
             src={chef} 
             alt="" 
