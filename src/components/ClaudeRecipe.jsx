@@ -1,10 +1,16 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
-const ClaudeRecipe = () => {
+
+const ClaudeRecipe = (props) => {
   return (
-    <section className="mt-8">
-    <h3 className="font-bold text-2xl">Shown when clicked</h3>
-</section>
+    <section className="flex items-center justify-center my-8 text-sm p-4">
+      <ReactMarkdown className='prose' remarkPlugins={[remarkGfm]}>
+         {props.recipe}
+      </ReactMarkdown>
+      
+    </section>
   )
 }
 

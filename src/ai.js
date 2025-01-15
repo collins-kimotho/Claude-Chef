@@ -6,13 +6,13 @@ You are an assistant that receives a list of ingredients that a user has and sug
 `
 
 
-const hf = new HfInference(process.env.HF_ACCESS_TOKEN)
+const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN)
 
 export async function getRecipeFromMistral(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")
-    try {@huggingface/inference
-        const response = await hf.cha tCompletion({
-            model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    try {
+        const response = await hf.chatCompletion({
+            model: "mistralai/Mistral-7B-Instruct-v0.2",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
@@ -21,6 +21,6 @@ export async function getRecipeFromMistral(ingredientsArr) {
         })
         return response.choices[0].message.content
     } catch (err) {
-        console.error(err.message)
+        console.error("Error fetching recipe: ",err.message)
     }
 }

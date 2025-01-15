@@ -19,7 +19,7 @@ const IngredientsList = (props) => {
             <h3 className='font-bold font-medium mb-2'>Ready for a recipe?</h3>
             <p className="">Generate a recipe from your list of ingredients</p>
         </div>
-        <button className="bg-orange-500/60 p-4 rounded-lg text-sm" onClick={props.toggleRecipeShown}>Get a recipe</button>
+        <button className="bg-orange-500/60 p-4 rounded-lg text-sm" onClick={props.getRecipe}>Get a recipe</button>
     </div>}
 
 </section>
