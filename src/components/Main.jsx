@@ -25,21 +25,21 @@ const Main = () => {
     }
 
   return (
-    <main className="h-full bg-white flex items-center justify-start flex-col">
+    <main className="h-full m-auto bg-white flex items-center justify-start flex-col p-6 overflow-hidden">
         
-        <div className="mt-8">
-            <form onSubmit={addIngredient} className='flex items-center justify-start gap-8'>
+        <div className="mt-8 overflow-hidden">
+            <form onSubmit={addIngredient} className='flex items-center justify-start gap-2'>
                 <input 
                     type="text" 
                     placeholder='e.g oregano'
-                    className='border-2 shrink w-64 h-14 rounded-lg p-4 bg-white'
+                    className='border-2 shrink h-14 rounded-lg p-2 bg-white'
                     aria-label='Add ingredient'
                     name='ingredient'
                 />
                 <button 
-                    className="bg-black  text-slate-100 p-4  rounded-lg h-14 text-sm"
+                    className="bg-black  text-slate-100 p-2  rounded-lg h-14 text-sm"
                 >
-                    + Add ingredient
+                    + Add Ingredient
                 </button> 
             </form>        
         </div>

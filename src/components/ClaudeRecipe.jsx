@@ -5,9 +5,9 @@ import remarkGfm from 'remark-gfm'
 
 const ClaudeRecipe = (props) => {
   return (
-    <section className="flex  flex-col items-center justify-center my-8 text-sm p-4" aria-live='polite'>
-      <h2 className='font-bold text-lg mb-4'>The Hugsy Chef Recommends:</h2>
-      <ReactMarkdown className='prose' remarkPlugins={[remarkGfm]}>
+    <section className="flex flex-col items-center justify-center m-4 text-sm max-w-screen-md overflow-hidden mx-auto w-full mx-auto" aria-live='polite'>
+      <h2 className='font-bold text-lg mb-2'>The Hugsy Chef Recommends:</h2>
+      <ReactMarkdown className='prose p-2 overflow-hidden rounded-sm' remarkPlugins={[remarkGfm]}>
          {props.recipe}
       </ReactMarkdown>
       

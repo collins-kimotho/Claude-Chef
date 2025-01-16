@@ -11,7 +11,7 @@ const IngredientsList = (props) => {
     ))
 
 
-  return (<section className="mt-4">
+  return (<section className="m-4 overflow-hidden">
     <h2 className="text-lg font-bold">Ingredients on hand:</h2>
     <ul className="list-disc list-inside">{ingredientsListItems}</ul>
     { props.ingredients.length > 3 && <div className="mt-8 bg-zinc-400/50 p-4 rounded-lg flex items-center justify-center gap-8">
